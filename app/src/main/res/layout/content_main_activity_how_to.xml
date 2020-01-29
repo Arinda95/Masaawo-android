@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.tony.masaawoprod.HowToMainActivity"
+    tools:showIn="@layout/activity_how_to_main">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:weightSum="1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView3"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/logo"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="How to use"
+            android:id="@+id/textView5"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000000"
+            android:textIsSelectable="false"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="#eac926" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="scroll down to read fully"
+            android:id="@+id/textView6"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#eac926"
+            android:layout_marginTop="5dp" />
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/HowToWebView"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.67"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#000000" />
+    </LinearLayout>
+</RelativeLayout>

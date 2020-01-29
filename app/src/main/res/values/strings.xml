@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">M a s a a w o</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_exit">Exit</string>
+    <string name="title_activity_scrolling_activity_tuts">How to use</string>
+</resources>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.tony.masaawoprod.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:background="@drawable/android_gradient_list"
+    android:animateLayoutChanges="true">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="20"
+        android:animateLayoutChanges="true">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="361dp"
+        android:background="@drawable/mobobg"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:layout_above="@+id/frameLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:animateLayoutChanges="true"
+        android:layout_weight="14">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.01"
+            android:layout_marginTop="45dp"
+            android:weightSum="1"
+            android:background="@drawable/response_input"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberPlateInput"
+                android:maxLength="7"
+                android:background="@drawable/round_input"
+                android:textAlignment="center"
+                android:hint="Type a number plate"
+                android:inputType="textCapCharacters"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:padding="8dp"
+                android:layout_weight="1.04"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/searchButton"
+                android:src="@android:drawable/ic_menu_search"
+                android:background="@drawable/round_button"
+                android:textColor="#eac926"
+                android:tint="#494949"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/respsafedimen"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/safe"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:weightSum="1"
+                android:gravity="center_horizontal"
+                android:id="@+id/safeTop">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="SAFE"
+                    android:id="@+id/safeHeader"
+                    android:textColor="#2d7e12"
+                    android:textStyle="bold"
+                    android:textSize="40dp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/safeImage"
+                    android:background="@drawable/thumbsup"
+                    android:layout_marginTop="7dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Not  reported, stay vigilant"
+                android:id="@+id/safeSubText"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#2d7e12"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/respunsafedimen"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:id="@+id/unsafe">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:weightSum="1"
+                android:id="@+id/unsafeTop"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="UNSAFE"
+                    android:id="@+id/unsafeHeader"
+                    android:textColor="#ff3240"
+                    android:textStyle="bold"
+                    android:textSize="40dp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/unsafeImage"
+                    android:background="@drawable/thumbsdown"
+                    android:layout_marginTop="7dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="This vehicle has been reported"
+                android:id="@+id/unsafeSubText"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ff3240"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/respemptydimen"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:id="@+id/empty">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:weightSum="1"
+                android:id="@+id/emptyTop"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="EMPTY"
+                    android:id="@+id/emptyHeader"
+                    android:textColor="#a341e8"
+                    android:textStyle="bold"
+                    android:textSize="40dp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/emptyImage"
+                    android:background="@drawable/hatari"
+                    android:layout_marginTop="7dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="No numberplate provided"
+                android:id="@+id/emptySubText"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#a341e8"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/respemptydimen"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:id="@+id/error">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:weightSum="1"
+                android:id="@+id/errorTop"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="No Internet"
+                    android:id="@+id/errorHeader"
+                    android:textColor="#a341e8"
+                    android:textStyle="bold"
+                    android:textSize="40dp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/errorImage"
+                    android:background="@drawable/hatari"
+                    android:layout_marginTop="7dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="No internet access, check your data"
+                android:id="@+id/errorSubText"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#a341e8"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By using you agree to"
+                android:id="@+id/textView2"
+                android:textColor="#eac926"
+                android:textSize="13dp"
+                android:layout_marginRight="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="terms and conditions"
+                android:id="@+id/tnc"
+                android:textColor="#0084ff"
+                android:textSize="13dp"
+                android:textIsSelectable="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/frameLayout"
+        android:background="#000000"
+        android:layout_weight="125421.73"></FrameLayout>
+
+</LinearLayout>
